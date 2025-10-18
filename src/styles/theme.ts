@@ -34,7 +34,7 @@ export const lightTheme = createTheme({
     primary: {
       main: "#e3f5ff",
     },
-
+    action: { hover: "rgba(28, 28, 28, 0.1)" },
     text: {
       primary: "#1c1c1c",
       secondary: "rgba(28, 28, 28, 0.4)",
@@ -58,6 +58,7 @@ export const darkTheme = createTheme({
     secondary: {
       main: "#f48fb1",
     },
+    action: { hover: "#333333" },
     background: {
       default: "#1c1c1c",
       paper: "#282828",

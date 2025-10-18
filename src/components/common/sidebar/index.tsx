@@ -1,9 +1,12 @@
-import { Box, Stack, Typography } from "@mui/material";
+import { Stack } from "@mui/material";
 import ProfilePicture from "./profile-picture";
-
-// type Props = { children?: React.ReactNode };
+import SidebarSection from "./sidebar-section";
+import { fetchSidebarData } from "@/api";
+import HighlightsPanel from "./highlights-panel";
 
 function Sidebar() {
+  const { sidebarSections, highlights } = fetchSidebarData();
+
   return (
     <Stack
       px={4}
@@ -12,49 +15,20 @@ function Sidebar() {
       border={1}
       borderColor="divider"
       width={{ xs: "100%", md: "20%" }}
+      height="100vh"
+      top={0}
+      position="sticky"
+      sx={{ overflowY: "auto", scrollbarWidth: "none" }}
     >
       <ProfilePicture />
+      <HighlightsPanel
+        favorites={highlights.favorites}
+        recentlyViewed={highlights.recentlyViewed}
+      />
 
-      <Stack>
-        <Stack direction="row" alignItems="center" spacing={2}>
-          {" "}
-          <Typography color="text.secondary" variant="body1">
-            Favorites
-          </Typography>
-          <Typography color="text.disabled" variant="body1">
-            Recently
-          </Typography>{" "}
-        </Stack>
-
-        <Stack
-          direction="row"
-          px={2}
-          py={1}
-          spacing={2}
-          alignItems="center"
-          borderRadius={2}
-        >
-          <Box
-            width={6}
-            height={6}
-            borderRadius="50%"
-            sx={{ backgroundColor: "text.disabled" }}
-          />
-          <Typography variant="body1"> Overview </Typography>
-        </Stack>
-
-        <Stack direction="row" px={2} py={1} spacing={2} alignItems="center">
-          <Box
-            width={6}
-            height={6}
-            borderRadius="50%"
-            sx={{ backgroundColor: "text.disabled" }}
-          />
-          <Typography variant="body1"> Projects </Typography>
-        </Stack>
-      </Stack>
-
-      {/* {children} */}
+      {sidebarSections.map(({ items, title }) => (
+        <SidebarSection key={title} title={title} items={items} />
+      ))}
     </Stack>
   );
 }
