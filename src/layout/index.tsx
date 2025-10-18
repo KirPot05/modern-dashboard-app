@@ -1,14 +1,13 @@
-import { Box, Typography } from "@mui/material";
+import Sidebar from "@/components/common/sidebar";
+import { Stack } from "@mui/material";
 import { Outlet } from "react-router";
 
 function PageLayout() {
   return (
-    <Box>
-      <Box bgcolor="background.paper">
-        <Typography variant="h4">Page Title</Typography>
-      </Box>
+    <Stack direction={{ xs: "column", md: "row" }}>
+      <Sidebar />
       <Outlet />
-    </Box>
+    </Stack>
   );
 }
 
