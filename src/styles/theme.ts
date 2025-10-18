@@ -4,6 +4,7 @@ import type { ThemeOptions } from "@mui/material/styles";
 const baseThemeOptions: ThemeOptions = {
   palette: {
     common: { black: "#1c1c1c", white: "#ffffff" },
+    divider: "rgba(28, 28, 28, 0.1)",
   },
   typography: {
     fontFamily: ["Inter", "Arial", "sans-serif"].join(","),
@@ -12,12 +13,10 @@ const baseThemeOptions: ThemeOptions = {
       fontSize: 14,
       fontWeight: 600,
     },
-
     body1: {
       fontSize: 14,
       fontWeight: 400,
     },
-
     body2: {
       fontSize: 12,
       fontWeight: 400,
@@ -40,7 +39,6 @@ export const lightTheme = createTheme({
       secondary: "rgba(28, 28, 28, 0.4)",
       disabled: "rgba(28, 28, 28, 0.2)",
     },
-
     background: {
       default: "#ffffff",
       paper: "#f7f9fb",

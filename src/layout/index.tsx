@@ -1,3 +1,4 @@
+import Navbar from "@/components/common/navbar";
 import Sidebar from "@/components/common/sidebar";
 import { Stack } from "@mui/material";
 import { Outlet } from "react-router";
@@ -6,7 +7,11 @@ function PageLayout() {
   return (
     <Stack direction={{ xs: "column", md: "row" }}>
       <Sidebar />
-      <Outlet />
+
+      <Stack flexGrow={1}>
+        <Navbar />
+        <Outlet />
+      </Stack>
     </Stack>
   );
 }
