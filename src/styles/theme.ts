@@ -2,8 +2,10 @@ import { createTheme } from "@mui/material/styles";
 import type { ThemeOptions } from "@mui/material/styles";
 
 const baseThemeOptions: ThemeOptions = {
+  palette: {
+    common: { black: "#1c1c1c", white: "#ffffff" },
+  },
   typography: {
-    // fontFamily: '"Inter", "Arial", sans-serif',
     fontFamily: ["Inter", "Arial", "sans-serif"].join(","),
 
     h4: {
@@ -21,6 +23,8 @@ const baseThemeOptions: ThemeOptions = {
       fontWeight: 400,
     },
   },
+
+  spacing: 4,
 };
 
 export const lightTheme = createTheme({
@@ -29,6 +33,12 @@ export const lightTheme = createTheme({
     mode: "light",
     primary: {
       main: "#e3f5ff",
+    },
+
+    text: {
+      primary: "#1c1c1c",
+      secondary: "rgba(28, 28, 28, 0.4)",
+      disabled: "rgba(28, 28, 28, 0.2)",
     },
 
     background: {
