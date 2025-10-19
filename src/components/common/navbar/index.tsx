@@ -25,6 +25,7 @@ function Navbar({ setSidebarOpen, setRightbarOpen }: Props) {
       justifyContent="space-between"
       position="sticky"
       top={0}
+      zIndex={10}
     >
       <Stack direction="row" spacing={4} alignItems="center">
         <IconButton
