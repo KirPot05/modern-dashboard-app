@@ -42,3 +42,36 @@ export function fetchSidebarData() {
 
   return { sidebarSections, highlights };
 }
+
+export function fetchCurrentStats() {
+  const summary = [
+    {
+      title: "Customers",
+      value: "3,781",
+      change: 11.01,
+      bgColor: "primary.main",
+      textColor: "common.black",
+    },
+    {
+      title: "Orders",
+      value: "1,219",
+      change: -0.03,
+      bgColor: "background.paper",
+    },
+    {
+      title: "Revenue",
+      value: "$695",
+      change: 15.03,
+      bgColor: "background.paper",
+    },
+    {
+      title: "Growth",
+      value: "30.1%",
+      change: 6.08,
+      bgColor: "secondary.main",
+      textColor: "common.black",
+    },
+  ];
+
+  return { summary };
+}
