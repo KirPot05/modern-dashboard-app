@@ -26,6 +26,7 @@ function HomePage() {
               rateChange={stat.change}
               bgColor={stat.bgColor}
               textColor={stat.textColor}
+              url={stat.url}
             />
           ))}
         </Grid>

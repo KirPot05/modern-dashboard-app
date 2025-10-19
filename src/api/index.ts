@@ -57,6 +57,7 @@ export function fetchCurrentStats() {
       value: "1,219",
       change: -0.03,
       bgColor: "background.paper",
+      url: "/orders",
     },
     {
       title: "Revenue",
