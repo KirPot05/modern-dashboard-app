@@ -1,11 +1,4 @@
-import {
-  Card,
-  CardContent,
-  LinearProgress,
-  Stack,
-  Typography,
-  useTheme,
-} from "@mui/material";
+import { LinearProgress, Stack, Typography, useTheme } from "@mui/material";
 
 type Props = {};
 
@@ -50,8 +43,8 @@ function RevenueByLocation({}: Props) {
 
   const theme = useTheme();
   return (
-    <Card sx={{ bgcolor: "background.paper", p: 4, borderRadius: 4 }}>
-      <CardContent>
+    <Stack sx={{ bgcolor: "background.paper", p: 4, borderRadius: 4 }}>
+      <Stack>
         <Stack spacing={4}>
           <Typography variant="h4" align="center">
             {" "}
@@ -61,6 +54,7 @@ function RevenueByLocation({}: Props) {
           <img
             src={`/assets/images/world-map-${theme.palette.mode}.png`}
             alt="World Map"
+            width={250}
           />
 
           <Stack>
@@ -73,8 +67,8 @@ function RevenueByLocation({}: Props) {
             ))}
           </Stack>
         </Stack>
-      </CardContent>
-    </Card>
+      </Stack>
+    </Stack>
   );
 }
 

@@ -1,4 +1,4 @@
-import { useTheme, Box, Card, CardContent, Typography } from "@mui/material";
+import { useTheme, Box, Typography, Stack, Divider } from "@mui/material";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -135,7 +135,7 @@ function RevenueChart({}: Props) {
   };
 
   return (
-    <Card
+    <Stack
       sx={{
         backgroundColor: "background.paper",
         boxShadow: "none",
@@ -144,27 +144,15 @@ function RevenueChart({}: Props) {
         padding: 6,
       }}
     >
-      <CardContent sx={{ p: { xs: 2, sm: 2 } }}>
-        <Box
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            mb: 6,
-            flexWrap: "wrap",
-          }}
-        >
+      <Stack spacing={6} sx={{ p: { xs: 2, sm: 2 } }}>
+        <Stack direction="row" spacing={4}>
           <Typography variant="h4" sx={{ mr: 5, mb: { xs: 1, sm: 0 } }}>
             Revenue
           </Typography>
+          <Divider orientation="vertical" />
+
           {/* Custom Legend */}
-          <Box
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              flexWrap: "wrap",
-              gap: { xs: 1.5, sm: 2 },
-            }}
-          >
+          <Stack direction="row" spacing={8}>
             <Box sx={{ display: "flex", alignItems: "center" }}>
               <Box
                 sx={{
@@ -179,7 +167,17 @@ function RevenueChart({}: Props) {
                 variant="body2"
                 sx={{ color: theme.palette.text.primary }}
               >
-                Current Week <span style={{ fontWeight: 600 }}>$58,211</span>
+                {/* Current Week <span style={{ fontWeight: 600 }}>$58,211</span>
+                 */}
+                <Typography variant="body2">
+                  Current Week{" "}
+                  <Typography
+                    component="span"
+                    fontWeight={theme.typography.fontWeightMedium}
+                  >
+                    $58,211
+                  </Typography>
+                </Typography>
               </Typography>
             </Box>
             <Box sx={{ display: "flex", alignItems: "center" }}>
@@ -188,24 +186,27 @@ function RevenueChart({}: Props) {
                   width: 8,
                   height: 8,
                   borderRadius: "50%",
-                  backgroundColor: theme.palette.secondary.main,
+                  backgroundColor: theme.palette.info.main,
                   mr: 1,
                 }}
               />
-              <Typography
-                variant="body2"
-                sx={{ color: theme.palette.text.secondary }}
-              >
-                Previous Week <span style={{ fontWeight: 600 }}>$68,768</span>
+              <Typography variant="body2">
+                Previous Week{" "}
+                <Typography
+                  component="span"
+                  fontWeight={theme.typography.fontWeightMedium}
+                >
+                  $68,768
+                </Typography>
               </Typography>
             </Box>
-          </Box>
-        </Box>
+          </Stack>
+        </Stack>
         <Box sx={{ height: 320 }}>
           <Line options={options} data={data} />
         </Box>
-      </CardContent>
-    </Card>
+      </Stack>
+    </Stack>
   );
 }
 

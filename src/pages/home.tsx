@@ -3,6 +3,7 @@ import ProjectionsChart from "@/components/home/projections-chart";
 import RevenueByLocation from "@/components/home/revenue-by-location";
 import RevenueChart from "@/components/home/revenue-chart";
 import StatCard from "@/components/home/stat-card";
+import TopSellingProducts from "@/components/home/top-selling-products";
 import { Container, Grid, Stack, Typography } from "@mui/material";
 
 function HomePage() {
@@ -34,12 +35,13 @@ function HomePage() {
       {/* Revenue Section */}
       <Stack my={7} direction={{ xs: "column", sm: "row" }} spacing={7}>
         <RevenueChart />
-
         <RevenueByLocation />
       </Stack>
 
       {/* Sales Section */}
-      <Stack></Stack>
+      <Stack>
+        <TopSellingProducts />
+      </Stack>
     </Container>
   );
 }

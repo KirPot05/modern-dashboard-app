@@ -1,4 +1,4 @@
-import { Box, Card, CardContent, Typography, useTheme } from "@mui/material";
+import { Box, Stack, Typography, useTheme } from "@mui/material";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -113,7 +113,7 @@ function ProjectionsChart({}: Props) {
   };
 
   return (
-    <Card
+    <Stack
       sx={{
         backgroundColor: "background.paper",
         boxShadow: "none",
@@ -123,15 +123,15 @@ function ProjectionsChart({}: Props) {
         borderRadius: 4,
       }}
     >
-      <CardContent sx={{ p: { xs: 2, sm: 3 } }}>
+      <Stack sx={{ p: { xs: 2, sm: 3 } }}>
         <Typography variant="h4" sx={{ mb: 6 }}>
           Projections vs Actuals
         </Typography>
         <Box>
           <Bar options={options} data={data} />
         </Box>
-      </CardContent>
-    </Card>
+      </Stack>
+    </Stack>
   );
 }
 
