@@ -2,62 +2,76 @@
 
 This isn't just another template; it's a comprehensive, opinionated starter kit designed to provide a production-grade foundation for building high-quality, performant, and accessible web applications with minimal friction. Built with **React 19**, **Vite**, and **Material UI**, this project incorporates modern best practices out of the box, allowing you to focus on building features, not boilerplate.
 
-#### [Checkout the live page](https://modern-dashboard-app.vercel.app/)
+[![React 19](https://img.shields.io/badge/React-19-blue?logo=react)](https://react.dev/)
+[![Vite](https://img.shields.io/badge/Bundler-Vite-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Material UI](https://img.shields.io/badge/UI-Material%20UI-007FFF?logo=mui)](https://mui.com/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
 
-## ✨ Key Features
+[![Deployment (Vercel)](https://img.shields.io/badge/deployed%20on-Vercel-black?logo=vercel)](https://modern-dashboard-app.vercel.app/)
+[![Live Preview](https://img.shields.io/badge/Live%20Demo-Visit%20Now-00C7B7?logo=vercel)](https://modern-dashboard-app.vercel.app/)
 
-- **Next-Gen React:** Leverages the power of **React 19** and the new **React Compiler** for optimized performance and a cleaner codebase.
-- **Blazing Fast Development:** Powered by **Vite** for near-instant server start and Hot Module Replacement (HMR).
-- **Pixel-Perfect UI:** Built with **Material UI (MUI)** for a beautiful, consistent, and customizable design system.
-- **Robust Testing Suite:** Pre-configured with **Vitest** and **React Testing Library** for both unit and integration testing.
-- **Reliability & Stability:** Integrated **Error Boundaries** and a structured **Logging** mechanism to catch and handle runtime errors gracefully.
-- **Fully Functional:** Includes essential dashboard features like **Filtering, Searching, Sorting, Pagination,** and a **Dark/Light Theme toggle**.
-- **Accessibility First:** Designed with accessibility standards (WCAG) in mind to ensure an inclusive experience for all users.
-- **Clean Architecture:** Organized with a scalable and intuitive folder structure that promotes code reusability and maintainability.
+## 🖼️ Preview
 
----
+| Light Mode                                                        | Dark Mode                                                       |
+| ----------------------------------------------------------------- | --------------------------------------------------------------- |
+| ![Light Mode Screenshot](/public/assets/images/display-light.png) | ![Dark Mode Screenshot](/public/assets/images/display-dark.png) |
 
-## 🏗️ Guiding Principles
+## ✨ Why Modern React Dashboard?
 
-This project is built on a set of core principles to ensure the highest quality output.
-
-### 🎨 Pixel-Perfect & Responsive Design
-
-We adhere to a "pixel-perfect" philosophy, ensuring that the final UI is a flawless translation of design mockups. Every component, spacing, and typographic detail is crafted with precision. The entire application is fully responsive, delivering a seamless experience across desktops, tablets, and mobile devices.
-
-### Code Quality & Best Practices
-
-Clean, well-documented, and maintainable code is non-negotiable. We follow industry best practices, including the **DRY (Don't Repeat Yourself)** principle, by building a library of reusable components and hooks. A strict ESLint configuration ensures code consistency and catches potential errors early.
-
-### ⚡ Performance Optimization
-
-Performance is a feature. The application is architected for efficiency, employing techniques like:
-
-- **Lazy Loading** for components and pages to reduce initial bundle size.
-- **Memoization** and the React 19 Compiler to minimize unnecessary re-renders.
-- Efficient state management to prevent performance bottlenecks.
-
-### 💖 Accessibility (a11y)
-
-We believe in building for everyone. Accessibility is integrated from the ground up, including proper use of **ARIA roles**, semantic HTML, keyboard navigation, and focus management to meet modern accessibility standards.
-
-### 🎬 Engaging Microinteractions
-
-Subtle animations and microinteractions are used to create a delightful and intuitive user experience. All motion is designed to be smooth and purposeful, enhancing usability without being distracting.
+This isn’t just another template — it’s a **fully opinionated, production-grade foundation** for building dashboards, SaaS products, and internal tools with **React 19** and **Material UI**.
+Every decision — from folder structure to lint rules — aims to help you **ship faster, safer, and smarter**.
 
 ---
 
-## 🛠️ Tech Stack & Tools
+## 🚀 Key Features
 
-- **Framework:** React 19, React DOM
-- **Compiler:** React Compiler
-- **Bundler:** Vite
-- **UI Library:** Material UI (MUI)
-- **Language:** TypeScript
-- **Testing:** Vitest, React Testing Library
-- **Linting:** ESLint
-- **Styling:** Emotion, CSS-in-JS
-- **State Management:** React Context API (with hooks, easily extendable for Redux)
+- ⚛️ **React 19 + React Compiler** — automatic memoization & concurrent rendering.
+- ⚡ **Vite-Powered** — ultra-fast HMR and production builds.
+- 🎨 **Material UI Design System** — consistent, accessible components.
+- 🧩 **Feature-Rich Dashboard** — filtering, sorting, search, pagination, theme toggle.
+- 🧠 **Clean Architecture** — modular, scalable, and easy to maintain.
+- 🧪 **Robust Testing Suite** — Vitest + React Testing Library pre-configured.
+
+---
+
+## 🏗️ Design & Development Principles
+
+### 🎨 Pixel-Perfect & Responsive
+
+Accurate design translation and fluid layouts across all breakpoints.
+
+### 🧹 Code Quality
+
+- **DRY / SOLID** patterns
+- Centralized reusable components
+- Strict ESLint rules + TypeScript types
+- Human-readable code & naming conventions
+
+### ⚡ Performance
+
+- Lazy loading, code-splitting, and React Compiler optimizations
+- Minimal re-renders, efficient state updates
+- Bundle size optimized via Vite plugins
+
+### 🎬 Micro-Interactions
+
+Subtle animations and transitions using MUI + CSS-in-JS to enhance UX.
+
+---
+
+## 🛠️ Tech Stack
+
+| Category         | Technology                             |
+| ---------------- | -------------------------------------- |
+| Framework        | React 19                               |
+| Bundler          | Vite                                   |
+| UI Library       | Material UI (MUI)                      |
+| Language         | TypeScript                             |
+| Styling          | Emotion (CSS-in-JS)                    |
+| State Management | React Context API (or Redux if needed) |
+| Testing          | Vitest, React Testing Library          |
+| Linting          | ESLint                                 |
 
 ---
 
@@ -66,27 +80,26 @@ Subtle animations and microinteractions are used to create a delightful and intu
 The project follows a feature-based folder structure that is intuitive and scalable.
 
 ```
-/
+modern-dashboard-app/
 ├── public/
 ├── src/
-│   ├── api/          # API call definitions and configurations
-│   ├── assets/       # Static assets like images and fonts
-│   ├── components/   # Shared, reusable UI components
-│   │   ├── common/   # Atomic components (Button, Input, etc.)
-│   │   └── layout/   # Layout components (Header, Sidebar, etc.)
-│   ├── context/      # React context providers
+│   ├── api/          # API configurations
+│   ├── assets/       # Images & fonts
+│   ├── components/   # Shared UI components
+│   │   ├── common/   # Atomic elements (Button, Input, etc.)
+│   │   └── layout/   # Layout (Header, Sidebar, etc.)
+│   ├── context/      # Global state providers
 │   ├── hooks/        # Custom React hooks
-│   ├── lib/          # External library configurations (e.g., Axios)
+│   ├── lib/          # Third-party setups (Axios, etc.)
 │   ├── pages/        # Page-level components
-│   ├── services/     # Business logic and services
-│   ├── styles/       # Global styles and theme configuration
-│   ├── types/        # TypeScript type definitions
-│   ├── utils/        # Utility functions
-│   ├── App.tsx       # Main application component with router
-│   └── main.tsx      # Application entry point
-├── tests/            # Test configurations and mocks
+│   ├── services/     # Business logic
+│   ├── styles/       # Global styles & theme
+│   ├── types/        # Type definitions
+│   ├── utils/        # Helper functions
+│   ├── App.tsx       # Root component + router
+│   └── main.tsx      # App entry point
+├── tests/            # Unit & integration tests
 ├── .eslintrc.cjs
-├── index.html
 ├── package.json
 ├── tsconfig.json
 └── vite.config.ts
@@ -94,105 +107,100 @@ The project follows a feature-based folder structure that is intuitive and scala
 
 ---
 
-## 🚀 Getting Started
-
-Follow these instructions to get the project up and running on your local machine.
+## ⚙️ Getting Started
 
 ### Prerequisites
 
-- Node.js (v18 or higher)
+- Node.js ≥ 18
 - npm or yarn
 
-### Installation & Setup
+### Setup
 
-1.  **Clone the repository:**
+```bash
+# 1️⃣ Clone
+git clone https://github.com/your-username/modern-react-dashboard.git
 
-    ```bash
-    git clone https://github.com/your-username/modern-react-dashboard.git
-    ```
+# 2️⃣ Enter project
+cd modern-react-dashboard
 
-2.  **Navigate to the project directory:**
+# 3️⃣ Install dependencies
+npm install
 
-    ```bash
-    cd modern-react-dashboard
-    ```
+# 4️⃣ Start dev server
+npm run dev
+```
 
-3.  **Install dependencies:**
-
-    ```bash
-    npm install
-    ```
-
-4.  **Run the development server:**
-
-    ```bash
-    npm run dev
-    ```
-
-    The application will be available at `http://localhost:5173`.
+App runs at **[http://localhost:5173](http://localhost:5173)**
 
 ---
 
-## 📜 Available Scripts
+## 📜 NPM Scripts
 
-- `npm run dev`: Starts the development server with Hot Module Replacement.
-- `npm run build`: Bundles the application for production.
-- `npm run lint`: Lints the code using ESLint.
-- `npm run test`: Runs the unit and integration tests with Vitest.
-- `npm run preview`: Serves the production build locally to preview it.
+| Command           | Description                      |
+| ----------------- | -------------------------------- |
+| `npm run dev`     | Start dev server (HMR)           |
+| `npm run build`   | Build for production             |
+| `npm run preview` | Preview production build locally |
+| `npm run lint`    | Run ESLint checks                |
+| `npm run test`    | Run tests with Vitest            |
 
 ---
 
-## 🧪 Testing
+## 🧪 Testing Strategy
 
-This project uses **Vitest** for its testing framework and **React Testing Library** to ensure components are tested from a user's perspective.
-
-- **Unit Tests:** Focus on individual functions and components in isolation.
-- **Integration Tests:** Test how multiple components work together to deliver a feature.
-
-To run all tests, use the command:
+- **Unit Tests:** Verify isolated logic and components.
+- **Integration Tests:** Validate combined behavior and interactions.
+  Run all tests:
 
 ```bash
 npm test
 ```
 
----
-
-## 🛡️ Error Handling & Logging
-
-A global **ErrorBoundary** component is configured in `App.tsx` to catch rendering errors in any child component, preventing the entire application from crashing. It displays a user-friendly fallback UI and logs the error for debugging purposes.
+Coverage reports integrate seamlessly with **Coveralls** or **Codecov**.
 
 ---
 
 ## ☁️ Deployment
 
-The application is ready to be deployed on any modern static hosting platform.
+1. **Build**
 
-1.  **Build the application:**
+   ```bash
+   npm run build
+   ```
 
-    ```bash
-    npm run build
-    ```
+   → Generates `/dist`
 
-    This command will create a `dist` folder with the optimized production assets.
+2. **Deploy on**
 
-2.  **Deploy:**
-    Deploy the contents of the `dist` folder to your preferred platform like **Vercel**, **Netlify**, or **GitHub Pages**. These platforms typically offer a seamless CI/CD pipeline with zero configuration.
+   - [Vercel (Recommended)](https://vercel.com)
+   - [Netlify](https://netlify.com)
+   - GitHub Pages or any static host
+
+Zero-config CI/CD supported.
 
 ---
 
-## 🤔 Challenges
+## 🧭 Roadmap / Challenges
 
-This section will document the key challenges faced during development and the solutions implemented. It serves as a log of complex problem-solving and architectural decisions.
-
-_(Placeholder: To be filled in as the project progresses.)_
+> Ongoing documentation of key architectural decisions, React 19 compiler performance benchmarks, and accessibility metrics.
 
 ---
 
 ## 🤝 Contributing
 
-Contributions are welcome\! Please feel free to open an issue or submit a pull request.
+Contributions welcome!
+Please open issues or PRs following conventional commits and ESLint rules.
+
+You can also discuss feature ideas under **GitHub Discussions**.
+
+---
 
 ## 📄 License
 
-This project is licensed under the MIT License. See the [LICENSE](/LICENSE) file for details.
+Licensed under the **MIT License** — see [LICENSE](./LICENSE).
+
+---
+
+### 💬 Feedback & Community
+
+If you build something cool with this, share it!
