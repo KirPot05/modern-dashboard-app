@@ -14,7 +14,7 @@ function Sidebar() {
       spacing={4}
       border={1}
       borderColor="divider"
-      width={{ xs: "100%", md: "20%" }}
+      width={{ xs: "100%", md: "15%" }}
       height="100vh"
       top={0}
       position="sticky"
