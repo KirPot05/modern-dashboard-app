@@ -140,14 +140,16 @@ function RevenueChart({}: Props) {
         backgroundColor: "background.paper",
         boxShadow: "none",
         borderRadius: 4,
+        width: "100%",
+        padding: 6,
       }}
     >
-      <CardContent sx={{ p: { xs: 2, sm: 3 } }}>
+      <CardContent sx={{ p: { xs: 2, sm: 2 } }}>
         <Box
           sx={{
             display: "flex",
             alignItems: "center",
-            mb: 3,
+            mb: 6,
             flexWrap: "wrap",
           }}
         >

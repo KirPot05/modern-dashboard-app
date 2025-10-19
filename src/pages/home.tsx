@@ -1,5 +1,6 @@
 import { fetchCurrentStats } from "@/api";
 import ProjectionsChart from "@/components/home/projections-chart";
+import RevenueByLocation from "@/components/home/revenue-by-location";
 import RevenueChart from "@/components/home/revenue-chart";
 import StatCard from "@/components/home/stat-card";
 import { Container, Grid, Stack, Typography } from "@mui/material";
@@ -10,7 +11,7 @@ function HomePage() {
   return (
     <Container component="main" sx={{ p: 2 }}>
       {/* ECommerce Section */}
-      <Typography variant="h4" p={2}>
+      <Typography variant="h4" px={2} py={4}>
         eCommerce
       </Typography>
       <Stack spacing={7} direction={{ sm: "row" }}>
@@ -31,8 +32,10 @@ function HomePage() {
       </Stack>
 
       {/* Revenue Section */}
-      <Stack my={7}>
+      <Stack my={7} direction={{ xs: "column", sm: "row" }} spacing={7}>
         <RevenueChart />
+
+        <RevenueByLocation />
       </Stack>
 
       {/* Sales Section */}

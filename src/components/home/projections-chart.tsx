@@ -119,10 +119,12 @@ function ProjectionsChart({}: Props) {
         boxShadow: "none",
         flexGrow: 1,
         width: "100%",
+        padding: 6,
+        borderRadius: 4,
       }}
     >
       <CardContent sx={{ p: { xs: 2, sm: 3 } }}>
-        <Typography variant="h6" sx={{ mb: 4 }}>
+        <Typography variant="h4" sx={{ mb: 6 }}>
           Projections vs Actuals
         </Typography>
         <Box>
