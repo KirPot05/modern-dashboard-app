@@ -13,9 +13,15 @@ function Navbar({}: Props) {
       direction="row"
       px={7}
       py={5}
-      sx={{ borderBottomColor: theme.palette.divider }}
+      sx={{
+        borderBottomColor: theme.palette.divider,
+        backgroundColor: theme.palette.background.default,
+      }}
       borderBottom={1}
       justifyContent="space-between"
+      position="sticky"
+      top={0}
+      // zIndex={50}
     >
       <Stack direction="row" spacing={4} alignItems="center">
         <IconButton sx={{ padding: 0 }}>

@@ -27,7 +27,7 @@ function StatCard({
         padding: 6,
         color: textColor,
         boxShadow: "none",
-        minWidth: 250,
+        minWidth: 150,
       }}
     >
       <Stack>

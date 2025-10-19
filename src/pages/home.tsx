@@ -5,18 +5,18 @@ import RevenueChart from "@/components/home/revenue-chart";
 import StatCard from "@/components/home/stat-card";
 import TopSellingProducts from "@/components/home/top-selling-products";
 import TotalSales from "@/components/home/total-sales";
-import { Container, Grid, Stack, Typography } from "@mui/material";
+import { Grid, Stack, Typography } from "@mui/material";
 
 function HomePage() {
   const { summary } = fetchCurrentStats();
 
   return (
-    <Container component="main" sx={{ p: 2 }}>
+    <Stack component="main" sx={{ px: 8 }}>
       {/* ECommerce Section */}
       <Typography variant="h4" px={2} py={4}>
         eCommerce
       </Typography>
-      <Stack spacing={7} direction={{ sm: "row" }}>
+      <Stack spacing={2} direction={{ sm: "row" }}>
         <Grid container spacing={7} size={{ xs: 12, sm: 6 }}>
           {summary.map((stat) => (
             <StatCard
@@ -44,7 +44,7 @@ function HomePage() {
         <TopSellingProducts />
         <TotalSales />
       </Stack>
-    </Container>
+    </Stack>
   );
 }
 
