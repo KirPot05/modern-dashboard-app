@@ -5,10 +5,16 @@ const baseThemeOptions: ThemeOptions = {
   palette: {
     common: { black: "#1c1c1c", white: "#ffffff" },
     divider: "rgba(28, 28, 28, 0.1)",
+    secondary: {
+      main: "#e5ecf6",
+    },
   },
   typography: {
     fontFamily: ["Inter", "Arial", "sans-serif"].join(","),
-
+    h2: {
+      fontSize: 24,
+      fontWeight: 600,
+    },
     h4: {
       fontSize: 14,
       fontWeight: 600,
@@ -22,7 +28,6 @@ const baseThemeOptions: ThemeOptions = {
       fontWeight: 400,
     },
   },
-
   spacing: 4,
 };
 
@@ -33,6 +38,7 @@ export const lightTheme = createTheme({
     primary: {
       main: "#e3f5ff",
     },
+    info: { main: "#A8C5DA", light: "#cfdfea" },
     action: { hover: "rgba(28, 28, 28, 0.1)" },
     text: {
       primary: "#1c1c1c",
@@ -54,9 +60,10 @@ export const darkTheme = createTheme({
       main: "#90caf9",
     },
     secondary: {
-      main: "#f48fb1",
+      main: "#e5ecf6",
     },
     action: { hover: "#333333" },
+    info: { main: "#a8c5da", light: "#677680" },
     background: {
       default: "#1c1c1c",
       paper: "#282828",
