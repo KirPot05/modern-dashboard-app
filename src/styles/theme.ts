@@ -5,9 +5,6 @@ const baseThemeOptions: ThemeOptions = {
   palette: {
     common: { black: "#1c1c1c", white: "#ffffff" },
     divider: "rgba(28, 28, 28, 0.1)",
-    secondary: {
-      main: "#e5ecf6",
-    },
   },
   typography: {
     fontFamily: ["Inter", "Arial", "sans-serif"].join(","),
@@ -37,6 +34,9 @@ export const lightTheme = createTheme({
     mode: "light",
     primary: {
       main: "#e3f5ff",
+    },
+    secondary: {
+      main: "#e5ecf6",
     },
     info: { main: "#A8C5DA", light: "#cfdfea" },
     action: { hover: "rgba(28, 28, 28, 0.1)" },
