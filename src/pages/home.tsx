@@ -4,6 +4,7 @@ import RevenueByLocation from "@/components/home/revenue-by-location";
 import RevenueChart from "@/components/home/revenue-chart";
 import StatCard from "@/components/home/stat-card";
 import TopSellingProducts from "@/components/home/top-selling-products";
+import TotalSales from "@/components/home/total-sales";
 import { Container, Grid, Stack, Typography } from "@mui/material";
 
 function HomePage() {
@@ -39,8 +40,9 @@ function HomePage() {
       </Stack>
 
       {/* Sales Section */}
-      <Stack>
+      <Stack my={7} direction={{ xs: "column", sm: "row" }} spacing={7}>
         <TopSellingProducts />
+        <TotalSales />
       </Stack>
     </Container>
   );

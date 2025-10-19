@@ -1,6 +1,25 @@
 import { createTheme } from "@mui/material/styles";
 import type { ThemeOptions } from "@mui/material/styles";
 
+declare module "@mui/material/styles" {
+  interface Palette {
+    sales: {
+      direct: string;
+      affiliate: string;
+      sponsored: string;
+      email: string;
+    };
+  }
+  interface PaletteOptions {
+    sales?: {
+      direct: string;
+      affiliate: string;
+      sponsored: string;
+      email: string;
+    };
+  }
+}
+
 const baseThemeOptions: ThemeOptions = {
   palette: {
     common: { black: "#1c1c1c", white: "#ffffff" },
@@ -49,6 +68,12 @@ export const lightTheme = createTheme({
       default: "#ffffff",
       paper: "#f7f9fb",
     },
+    sales: {
+      direct: "#1c1c1c",
+      affiliate: "#98ec98",
+      sponsored: "#a8bdf9",
+      email: "#a7e4fa",
+    },
   },
 });
 
@@ -71,6 +96,12 @@ export const darkTheme = createTheme({
     text: {
       primary: "#ffffff",
       secondary: "rgba(255, 255, 255, 0.7)",
+    },
+    sales: {
+      direct: "#d0b3ff",
+      affiliate: "#98ec98",
+      sponsored: "#a8bdf9",
+      email: "#a7e4fa",
     },
   },
 });
