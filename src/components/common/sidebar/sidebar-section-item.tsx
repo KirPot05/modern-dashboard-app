@@ -94,7 +94,10 @@ function SidebarSectionItem({ iconUrl, label, nestedPages }: Props) {
       {nestedPages && displayNestedPages && nestedPages.length > 0 && (
         <List>
           {nestedPages.map((page, index) => (
-            <ListItemButton key={index} sx={{ py: 0.5, px: 1, pl: 14 }}>
+            <ListItemButton
+              key={index}
+              sx={{ py: 0.5, pr: 1, pl: 14, borderRadius: 2 }}
+            >
               <ListItemText
                 primary={page.label}
                 slotProps={{ primary: { variant: "body1" } }}
