@@ -62,16 +62,16 @@ Subtle animations and transitions using MUI + CSS-in-JS to enhance UX.
 
 ## 🛠️ Tech Stack
 
-| Category         | Technology                             |
-| ---------------- | -------------------------------------- |
-| Framework        | React 19                               |
-| Bundler          | Vite                                   |
-| UI Library       | Material UI (MUI)                      |
-| Language         | TypeScript                             |
-| Styling          | Emotion (CSS-in-JS)                    |
-| State Management | React Context API (or Redux if needed) |
-| Testing          | Vitest, React Testing Library          |
-| Linting          | ESLint                                 |
+| Category         | Technology                    |
+| ---------------- | ----------------------------- |
+| Framework        | React 19                      |
+| Bundler          | Vite                          |
+| UI Library       | Material UI (MUI)             |
+| Language         | TypeScript                    |
+| Styling          | Emotion (CSS-in-JS)           |
+| State Management | React Context API             |
+| Testing          | Vitest, React Testing Library |
+| Linting          | ESLint                        |
 
 ---
 
