@@ -39,6 +39,7 @@ function TopSellingProducts({}: Props) {
       p={6}
       borderRadius={4}
       spacing={1}
+      width="100%"
     >
       <Stack>
         <Typography variant="h4" sx={{ mb: 2, px: 4 }}>

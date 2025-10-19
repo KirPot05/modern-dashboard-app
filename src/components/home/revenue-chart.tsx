@@ -163,20 +163,15 @@ function RevenueChart({}: Props) {
                   mr: 1,
                 }}
               />
-              <Typography
-                variant="body2"
-                sx={{ color: theme.palette.text.primary }}
-              >
-                {/* Current Week <span style={{ fontWeight: 600 }}>$58,211</span>
-                 */}
-                <Typography variant="body2">
-                  Current Week{" "}
-                  <Typography
-                    component="span"
-                    fontWeight={theme.typography.fontWeightMedium}
-                  >
-                    $58,211
-                  </Typography>
+              {/* Current Week <span style={{ fontWeight: 600 }}>$58,211</span>
+               */}
+              <Typography variant="body2">
+                Current Week{" "}
+                <Typography
+                  component="span"
+                  fontWeight={theme.typography.fontWeightMedium}
+                >
+                  $58,211
                 </Typography>
               </Typography>
             </Box>
