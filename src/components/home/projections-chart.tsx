@@ -117,9 +117,8 @@ function ProjectionsChart({}: Props) {
       sx={{
         backgroundColor: "background.paper",
         boxShadow: "none",
-        flexGrow: 1,
-        width: "100%",
         padding: 6,
+        width: "100%",
         borderRadius: 4,
       }}
     >

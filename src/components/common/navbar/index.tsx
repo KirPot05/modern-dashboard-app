@@ -1,10 +1,14 @@
 import { IconButton, Stack, useTheme, Breadcrumbs, Link } from "@mui/material";
 import SearchBar from "./searchbar";
 import { useThemeContext } from "@/context/ThemeContext";
+import type React from "react";
 
-type Props = {};
+type Props = {
+  setSidebarOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  setRightbarOpen: React.Dispatch<React.SetStateAction<boolean>>;
+};
 
-function Navbar({}: Props) {
+function Navbar({ setSidebarOpen, setRightbarOpen }: Props) {
   const theme = useTheme();
   const { toggleColorMode } = useThemeContext();
 
@@ -21,10 +25,12 @@ function Navbar({}: Props) {
       justifyContent="space-between"
       position="sticky"
       top={0}
-      // zIndex={50}
     >
       <Stack direction="row" spacing={4} alignItems="center">
-        <IconButton sx={{ padding: 0 }}>
+        <IconButton
+          sx={{ padding: 0 }}
+          onClick={() => setSidebarOpen((prev) => !prev)}
+        >
           <img
             src="/assets/icons/sidebar-icon.svg"
             alt="sidebar open icon"
@@ -96,7 +102,10 @@ function Navbar({}: Props) {
             }}
           />
         </IconButton>
-        <IconButton sx={{ padding: 0 }}>
+        <IconButton
+          sx={{ padding: 0 }}
+          onClick={() => setRightbarOpen((prev) => !prev)}
+        >
           <img
             src="/assets/icons/sidebar-icon.svg"
             alt="sidebar icon"
