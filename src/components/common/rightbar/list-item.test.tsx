@@ -38,7 +38,7 @@ describe("ListItem", () => {
 
   it("should apply a background to the icon if imageBackgroundRequired is true", () => {
     const icon = <img src="test.png" alt="test icon" />;
-    const { container } = renderWithProviders(
+    renderWithProviders(
       <ListItem id={1} title="Test Title" icon={icon} imageBackgroundRequired />
     );
     const iconContainer = screen.getByTestId("icon-container");
@@ -49,9 +49,7 @@ describe("ListItem", () => {
 
   it("should not apply a background to the icon if imageBackgroundRequired is false", () => {
     const icon = <img src="test.png" alt="test icon" />;
-    const { container } = renderWithProviders(
-      <ListItem id={1} title="Test Title" icon={icon} />
-    );
+    renderWithProviders(<ListItem id={1} title="Test Title" icon={icon} />);
     const iconContainer = screen.getByTestId("icon-container");
     expect(iconContainer).toHaveStyle("background-color: rgba(0, 0, 0, 0)");
   });

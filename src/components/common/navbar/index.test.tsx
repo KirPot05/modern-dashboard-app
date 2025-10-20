@@ -10,7 +10,7 @@ const theme = createTheme();
 const mockToggleColorMode = vi.fn();
 
 const renderWithProviders = (
-  ui: React.ReactElement,
+  _ui: React.ReactElement,
   {
     setSidebarOpen = vi.fn(),
     setRightbarOpen = vi.fn(),
