@@ -31,6 +31,8 @@ function Navbar({ setSidebarOpen, setRightbarOpen }: Props) {
         <IconButton
           sx={{ padding: 0 }}
           onClick={() => setSidebarOpen((prev) => !prev)}
+          data-testid="sidebar-button"
+          aria-label="open sidebar"
         >
           <img
             src="/assets/icons/sidebar-icon.svg"
@@ -106,6 +108,8 @@ function Navbar({ setSidebarOpen, setRightbarOpen }: Props) {
         <IconButton
           sx={{ padding: 0 }}
           onClick={() => setRightbarOpen((prev) => !prev)}
+          data-testid="rightbar-button"
+          aria-label="open rightbar"
         >
           <img
             src="/assets/icons/sidebar-icon.svg"

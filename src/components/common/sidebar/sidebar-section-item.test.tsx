@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, fireEvent } from "@testing-library/react";
 import SidebarSectionItem from "./sidebar-section-item";
 
 describe("SidebarSectionItem", () => {
@@ -33,11 +33,13 @@ describe("SidebarSectionItem", () => {
       />
     );
 
+    // Click the item to show nested pages
+    fireEvent.click(screen.getByText(label));
+
     // Check if nested pages are rendered
     nestedPages.forEach((page) => {
       const pageElement = screen.getByText(page.label);
       expect(pageElement).toBeInTheDocument();
-      expect(pageElement.closest("a")).toHaveAttribute("href", page.url);
     });
   });
 

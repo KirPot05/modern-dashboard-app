@@ -1,7 +1,7 @@
 import { Stack } from "@mui/material";
 import ProfilePicture from "./profile-picture";
 import SidebarSection from "./sidebar-section";
-import { fetchSidebarData } from "@/api";
+import { fetchSidebarData } from "@/api/";
 import HighlightsPanel from "./highlights-panel";
 
 function Sidebar() {

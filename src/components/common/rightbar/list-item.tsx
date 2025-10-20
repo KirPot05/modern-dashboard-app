@@ -28,6 +28,7 @@ function ListItem({
             : "transparent",
         }}
         p={1}
+        data-testid="icon-container"
       >
         {icon}
       </Stack>
